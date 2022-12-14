@@ -1,7 +1,14 @@
 # SETUP ESD
+# Start python
+cd ./resources/backend/
+1. py -m pip install -r requirements.txt
 
+# Start test server
+1. py .\app.py
 
-
+# Start electron
+1.  npm install
+1.  npm run dev
 
 ## Build python
 1. cd ./resources/backend/
