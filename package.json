@@ -1,0 +1,42 @@
+{
+  "name": "esd",
+  "version": "1.0.0",
+  "description": "eSign Utility",
+  "main": "index.js",
+  "scripts": {
+    "dev": "electron .",
+    "pack": "electron-builder --dir",
+    "setup": "electron-builder build --win --x64"
+  },
+  "keywords": [
+    "ESD"
+  ],
+  "author": "{'name': 'Vap Technologies Limited', 'email': 'vishal@vaptechltd@gmail.com'}",
+  "license": "MIT",
+  "build": {
+    "appId": "esd.vaptechltd.co.ke",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icon.ico"
+    },
+    "directories": {
+      "buildResources": "resources",
+      "output": "release"
+     },
+     "extraFiles": [
+      {
+        "from": "./resources/backend/dist/app",
+        "to": "resources/backend/dist/app/",
+        "filter": [
+          "**/*"
+         ]
+      }
+    ]
+  },
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0"
+  }
+}
